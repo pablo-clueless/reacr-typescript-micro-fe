@@ -1,8 +1,8 @@
 /// <reference types='react' />
 
-declare module 'app1/Home' {
-    const Home: React.ComponentType
-    export default Home
+declare module 'app1/Dashboard' {
+    const Dashboard: React.ComponentType
+    export default Dashboard
 }
 
 declare module 'app2/Hub' {

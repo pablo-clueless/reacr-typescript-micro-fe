@@ -1,9 +1,9 @@
 import React, { Suspense } from 'react'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 
-import { Container, Navbar } from './components'
+import { Home, Navbar } from './components'
 
-const Home = React.lazy(() => import('app1/Home'))
+const Dashboard = React.lazy(() => import('app1/Dashboard'))
 const Hub = React.lazy(() => import('app2/Hub'))
 
 
@@ -13,8 +13,8 @@ const App = () => {
       <Suspense fallback={null}>
         <Navbar />
           <Routes>
-            <Route path='/' element={<Container />} />
-            <Route path='/dashboard' element={<Home />} />
+            <Route path='/' element={<Home />} />
+            <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/hub' element={<Hub />} />
           </Routes>
       </Suspense>
