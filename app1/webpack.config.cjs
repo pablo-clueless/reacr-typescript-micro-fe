@@ -21,6 +21,11 @@ module.exports = {
         loader: 'ts-loader',
         exclude: /node_modules/,
       },
+      {
+        test: /\.css$/i,
+        include: path.resolve(__dirname, 'src'),
+        use: ['style-loader', 'css-loader', 'postcss-loader'],
+      }
     ],
   },
   plugins: [
@@ -28,7 +33,7 @@ module.exports = {
       name: 'app1',
       filename: 'remoteEntry.js',
       exposes: {
-        './Home': './src/components/Home',
+        './Dashboard': './src/components/Dashboard',
       },
       shared: {
         ...deps,
