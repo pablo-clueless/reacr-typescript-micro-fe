@@ -73,7 +73,7 @@ const IconButton = styled('div')`
   display: grid;
   place-items: center;
   padding: 0.5rem;
-  font-size: ${SIZES.lg}px;
+  font-size: 1.2rem;
   color: ${COLORS.light};
   cursor: pointer;
   transition: all 0.5s ease cubic-beizer(0.875, 1, 0.5, 1.2);

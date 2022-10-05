@@ -7,7 +7,16 @@ const Home = () => {
   return (
     <Container>
       <h1>a new drone in the market</h1>
-      <span>get the new SAVX150e now!</span>
+      <span>Get the new SAVX150e now!</span>
+
+      <Flex>
+        <Button style={{background: 'transparent',color: `${COLORS.light}`,borderColor: `${COLORS.light}`}}>
+          Discover More
+        </Button>
+        <Button>
+          Pre-order
+        </Button>
+      </Flex>
     </Container>
   )
 }
@@ -32,6 +41,25 @@ const Container = styled('div')`
     color: ${COLORS.primary};
     font-size: 1.5rem;
     margin: 1rem 0;
+  }
+`
+const Flex = styled('ul')`
+  list-style: none;
+  display: inline-flex;
+  align-items: center;
+  gap: 1rem;
+`
+
+const Button = styled('button')`
+  padding: 1rem 1.5rem;
+  min-width: 120px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  border: 1px solid;
+
+  &:hover {
+    transformtr
   }
 `
 

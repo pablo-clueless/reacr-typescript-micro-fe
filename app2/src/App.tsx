@@ -5,7 +5,11 @@ import Hub from './components/Hub'
 
 const App = () => {
   return (
-    <Hub />
+    <Router>
+      <Routes>
+        <Route path='/' element={<Hub />} />
+      </Routes>
+    </Router>
   )
 }
 
