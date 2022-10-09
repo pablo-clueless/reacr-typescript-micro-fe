@@ -17,6 +17,7 @@ const Home = () => {
           Pre-order
         </Button>
       </Flex>
+      <Wrapper></Wrapper>
     </Container>
   )
 }
@@ -43,6 +44,15 @@ const Container = styled('div')`
     margin: 1rem 0;
   }
 `
+
+const Wrapper = styled('div')`
+  width: 100%;
+  height: 800px;
+  background: url('');
+  margin: 1rem 0;
+  border: 1px solid red;
+`
+
 const Flex = styled('ul')`
   list-style: none;
   display: inline-flex;

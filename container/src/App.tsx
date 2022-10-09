@@ -1,29 +1,30 @@
 import React, { Suspense } from 'react'
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { Routes, Route } from 'react-router-dom'
 import styled from 'styled-components'
 
-import { AppProvider } from './contexts/AppContext'
-import { Home, Navbar } from './components'
+import { Home, Navbar, Sidebar } from './components'
+import { useAppContext } from './contexts/AppContext'
 
 const Dashboard = React.lazy(() => import('app1/Dashboard'))
 const Hub = React.lazy(() => import('app2/Hub'))
 
 const App = () => {
+  const { isOpen } = useAppContext()
+
   return (
-    <AppProvider>
-      <Router>
-        <Suspense fallback={null}>
-          <Nav>
-            <Navbar />
-          </Nav>
-            <Routes>
-              <Route path='/' element={<Home />} />
-              <Route path='/dashboard' element={<Dashboard />} />
-              <Route path='/hub' element={<Hub />} />
-            </Routes>
-        </Suspense>
-      </Router>
-    </AppProvider>
+    <>
+    <Suspense fallback={null}>
+      <Nav>
+        <Navbar />
+      </Nav>
+        <Routes>
+          <Route path='/' element={<Home />} />
+          <Route path='/dashboard' element={<Dashboard />} />
+          <Route path='/hub' element={<Hub />} />
+        </Routes>
+    </Suspense>
+    {isOpen && <Sidebar />}
+    </>
   )
 }
 

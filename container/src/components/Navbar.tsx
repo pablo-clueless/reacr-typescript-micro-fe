@@ -38,7 +38,7 @@ const Navbar = () => {
 
 const Nav = styled('div')`
   width: 100%;
-  padding: 2rem 1rem;
+  padding: 1rem;
   background: ${COLORS.black};
   display: flex;
   align-items: center;

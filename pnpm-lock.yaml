@@ -3,9 +3,11 @@ lockfileVersion: 5.4
 specifiers:
   '@octokit/core': ^4.0.5
   lerna: 3.22.1
+  react-icons: ^4.4.0
 
 dependencies:
   '@octokit/core': 4.0.5
+  react-icons: 4.4.0
 
 devDependencies:
   lerna: 3.22.1_@octokit+core@4.0.5
@@ -4157,6 +4159,12 @@ packages:
     resolution: {integrity: sha512-ARhCpm70fzdcvNQfPoy49IaanKkTlRWF2JMzqhcJbhSFRZv7nPTvZJdcY7301IPmvW+/p0RgIWnQDLJxifsQ7g==}
     engines: {node: '>=8'}
     dev: true
+
+  /react-icons/4.4.0:
+    resolution: {integrity: sha512-fSbvHeVYo/B5/L4VhB7sBA1i2tS8MkT0Hb9t2H1AVPkwGfVHLJCqyr2Py9dKMxsyM63Eng1GkdZfbWj+Fmv8Rg==}
+    peerDependencies:
+      react: '*'
+    dev: false
 
   /read-cmd-shim/1.0.5:
     resolution: {integrity: sha512-v5yCqQ/7okKoZZkBQUAfTsQ3sVJtXdNfbPnI5cceppoxEVLYA3k+VtV2omkeo8MS94JCy4fSiUwlRBAwCVRPUA==}
